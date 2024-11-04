@@ -170,7 +170,7 @@ class Duolingo:
     def get_duolingo_words_and_save_mp3(self):
         if not self.tts_url:
             self._make_duolingo_setting()
-        r = self.s.get("https://www.duolingo.com/vocabulary/overview", headers=HEADERS)
+        r = self.s.get("https://www.duolingo.com/characters", headers=HEADERS)
         if not r.ok:
             raise Exception("get duolingo words failed")
         res_json = r.json()
